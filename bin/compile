@@ -58,8 +58,11 @@ cp "$BOOT_SH_CACHE_PATH" "$BOOT_SH_SLUG_PATH"
 
 chmod a+x "$BOOT_SH_SLUG_PATH"
 
+
+echo $BOOT_SH_CACHE_PATH
 echo $BOOT_SH_SLUG_PATH
 
+echo "donea"
 $BOOT_SH_SLUG_PATH -V
 
 # unpack existing cache
