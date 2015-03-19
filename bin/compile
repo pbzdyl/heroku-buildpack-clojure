@@ -44,18 +44,18 @@ BOOT_SH_CACHE_PATH="$CACHE_DIR/boot"
 BOOT_SH_SLUG_PATH="$BUILD_DIR/boot"
 
 if [ ! -r "$BOOT_SH_CACHE_PATH" ]; then
-    echo "-----> Installing Boot 2.0.0-rc8 from github..."
+    echo "-----> Installing Boot 2.0.0-rc12 from github..."
     echo "       Downloading boot.sh"
     mkdir -p $(dirname $BOOT_SH_CACHE_PATH)
     curl --silent --show-error --max-time 120 -L -o "$BOOT_SH_CACHE_PATH" $BOOT_SH_URL
-    echo "curled"
-    chmod a+x boot
     echo "       ...done"
 else
     echo "-----> Using cached Boot"
 fi
 
 cp "$BOOT_SH_CACHE_PATH" "$BOOT_SH_SLUG_PATH"
+
+chmod a+x boot
 
 # unpack existing cache
 CACHE_STORE_DIR=$CACHE_DIR"/.m2"
