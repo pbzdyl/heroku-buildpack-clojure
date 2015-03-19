@@ -58,8 +58,6 @@ cp "$BOOT_SH_CACHE_PATH" "$BOOT_SH_SLUG_PATH"
 
 chmod a+x "$BOOT_SH_SLUG_PATH"
 
-export $BOOT_SH_SLUG_PATH
-
 # unpack existing cache
 CACHE_STORE_DIR=$CACHE_DIR"/.m2"
 CACHE_TARGET_DIR=$BUILD_DIR"/.m2"
