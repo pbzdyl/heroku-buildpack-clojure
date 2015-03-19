@@ -46,7 +46,7 @@ BOOT_SH_SLUG_PATH="$BUILD_DIR/boot"
 if [ ! -r "$BOOT_SH_CACHE_PATH" ]; then
     echo "-----> Installing Boot 2.0.0-rc8 from github..."
     echo "       Downloading boot.sh"
-    echo "Copying to ${BOOT_SH_CACHE_PATH} from ${$BOOT_SH_URL}"
+    echo "Copying to ${BOOT_SH_CACHE_PATH} from ${BOOT_SH_URL}"
     curl -L -s -o ${BOOT_SH_CACHE_PATH} ${BOOT_SH_URL}
     chmod a+x boot
     echo "       ...done"
