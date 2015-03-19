@@ -39,14 +39,15 @@ install_java ${BUILD_DIR} ${javaVersion}
 jdk_overlay ${BUILD_DIR}
 echo "done"
 
-BOOT_SH_URL="https://github.com/boot-clj/boot/releases/download/2.0.0-rc8/boot.sh"
+BOOT_SH_URL="https://github.com/boot-clj/boot/releases/download/2.0.0-rc12/boot.sh"
 BOOT_SH_CACHE_PATH="$CACHE_DIR/boot"
 BOOT_SH_SLUG_PATH="$BUILD_DIR/boot"
 
 if [ ! -r "$BOOT_SH_CACHE_PATH" ]; then
     echo "-----> Installing Boot 2.0.0-rc8 from github..."
     echo "       Downloading boot.sh"
-    curl -L -s -o "$BOOT_SH_CACHE_PATH" "$BOOT_SH_URL"
+    echo "Copying to ${BOOT_SH_CACHE_PATH} from ${$BOOT_SH_URL}"
+    curl -L -s -o ${BOOT_SH_CACHE_PATH} ${BOOT_SH_URL}
     chmod a+x boot
     echo "       ...done"
 else
