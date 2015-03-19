@@ -62,6 +62,7 @@ chmod a+x "$BOOT_SH_SLUG_PATH"
 echo $BOOT_SH_CACHE_PATH
 echo $BOOT_SH_SLUG_PATH
 
+ls $BUILD_DIR
 echo "donea"
 $BOOT_SH_SLUG_PATH -V
 
