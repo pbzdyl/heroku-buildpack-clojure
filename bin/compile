@@ -62,7 +62,7 @@ chmod a+x "$BOOT_SH_SLUG_PATH"
 echo $BOOT_SH_CACHE_PATH
 echo $BOOT_SH_SLUG_PATH
 
-stat -l $BUILD_DIR/boot
+stat $BUILD_DIR/boot
 
 # unpack existing cache
 CACHE_STORE_DIR=$CACHE_DIR"/.m2"
